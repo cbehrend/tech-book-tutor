@@ -13,8 +13,8 @@ cd my-learning-project
 
 **Setup:**
 1.  **Add Content**:
-    *   Place your book PDF in `book/`.
-    *   Place your sample code in `sample-code/`.
+    *   Place your book PDF into a directory named `book/` within the repo you created.
+    *   Place your sample code into a directory named `sample-code/` within the repo you created.
 2.  **Commit**:
     ```bash
     git add .
