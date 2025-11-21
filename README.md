@@ -51,6 +51,17 @@ In the age of AI, the skill of "typing syntax from memory" is being replaced by 
     *   **Gemini 3 Pro (High)** (Recommended)
     *   **Claude 4.5 Sonnet**
     *   **GPT-5 mini**
+*   **PDF Conversion Tool** (for converting book PDF to Markdown):
+    *   **Windows**: Install [Xpdf command line tools](https://www.xpdfreader.com/download.html)
+        *   Download and extract the Windows version
+        *   Add the `bin64` (or `bin32`) folder to your system PATH
+        *   Test installation: `pdftotext -v` (should show version info)
+    *   **Mac**: Install via Homebrew: `brew install poppler`
+        *   Test installation: `pdftotext -v` (should show version info)
+    *   **Linux**: Install via package manager:
+        *   Ubuntu/Debian: `sudo apt-get install poppler-utils`
+        *   RedHat/CentOS: `sudo yum install poppler-utils`
+        *   Test installation: `pdftotext -v` (should show version info)
 
 ## Workflow Phases
 

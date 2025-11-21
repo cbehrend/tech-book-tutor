@@ -15,11 +15,23 @@ Guide the user through these steps:
 1.  **Verify Node.js**: Ask the user to run `node -v`.
     *   *Requirement*: Must be compatible with Jest 29.x and Vitest. (v18+ is safest).
 2.  **Verify npm/npx**: Ask the user to run `npm -v` and `npx -v`.
-3.  **Identify Workspace**:
+3.  **Detect Operating System**: Check if the user is on Windows or Unix-like system.
+4.  **Verify PDF Conversion Tool** (if PDF needs to be converted):
+    *   **Windows**: Check if `pdftotext.exe` is available by running `where pdftotext`.
+        *   If not found, instruct the user to install Xpdf command line tools from https://www.xpdfreader.com/download.html and add to PATH.
+        *   Test installation: `pdftotext -v` (should show version info).
+    *   **Mac**: Check if `pdftotext` is available by running `which pdftotext`.
+        *   If not found, instruct the user to install poppler via Homebrew: `brew install poppler`.
+        *   Test installation: `pdftotext -v` (should show version info).
+    *   **Linux**: Check if `pdftotext` is available by running `which pdftotext`.
+        *   If not found, instruct the user to install poppler-utils: `sudo apt-get install poppler-utils` (Ubuntu/Debian) or `sudo yum install poppler-utils` (RedHat/CentOS).
+        *   Test installation: `pdftotext -v` (should show version info).
+5.  **Identify Workspace**:
     *   Look for a `props.yml` file in the root.
     *   **If found**: Read the `workspace` key. This is the user's working directory.
     *   **If NOT found**:
-        *   Run `node scripts/setup.js`.
+        *   **Windows**: Run `cd scripts && setup.bat` (or `node setup.js` if Node.js scripts are preferred).
+        *   **Unix/Mac**: Run `node scripts/setup.js`.
         *   **Note**: This script will also attempt to convert the book PDF. If it warns about the missing PDF, ask the user to place the file in `book/` and run setup again.
         *   Read the newly created `props.yml` to get the workspace name.
 4.  **Create .gitignore**:
