@@ -10,10 +10,11 @@ Clone this repo using GitHub CLI:
 gh repo create my-learning-project --template cbehrend/tech-book-tutor --private
 ```
 
-Clone the repo you just created:
+Clone the repo you just created (assuming you have SSH keys set up):
 
 ```bash
-gh repo clone my-learning-project
+# replace <user> with your user
+git clone git@github.com:<user>/my-learning-project.git
 ```
 
 Navigate to the new repo:
