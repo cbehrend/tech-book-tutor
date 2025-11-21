@@ -4,10 +4,20 @@
 This is a **template**. Create a new repository based on it to start your learning journey.
 
 **Using GitHub CLI:**
+Clone this repo using GitHub CLI:
+
 ```bash
-# Replace <user> with the owner of this template
 gh repo create my-learning-project --template cbehrend/tech-book-tutor --private
+```
+
+Clone the repo you just created:
+
+```bash
 gh repo clone my-learning-project
+```
+
+Navigate to the new repo:
+```bash
 cd my-learning-project
 ```
 
